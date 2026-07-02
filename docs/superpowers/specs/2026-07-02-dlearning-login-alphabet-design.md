@@ -34,7 +34,7 @@ Sao chép khung từ `clean-architect-template` (.NET 10, EF Core 10 + Npgsql, C
 - **Giữ nguyên:** SharedKernel (Result/Error/Entity/AggregateRoot/AuditedEntity…), ValidationDecorator + LoggingDecorator (thứ tự inner-to-outer: Validation trước, Logging sau), domain events dispatch-after-commit, AuditingInterceptor, 3 project test, `.editorconfig`, `Directory.Build.props`, `Directory.Packages.props`.
 - Dependency rule `SharedKernel → Domain → Application → Infrastructure → Web.Api` tiếp tục được ArchitectureTests enforce.
 
-Package thêm mới (vào `Directory.Packages.props`): `BCrypt.Net-Next` (hash mật khẩu), `Microsoft.AspNetCore.Authentication.JwtBearer` (JWT).
+Hash mật khẩu dùng **PBKDF2-HMAC-SHA256 native** (`System.Security.Cryptography.Rfc2898DeriveBytes` trong BCL — không thêm package crypto bên thứ ba; cố tình tránh `Microsoft.AspNetCore.Identity.PasswordHasher` vì namespace `Microsoft.AspNetCore.*` sẽ làm fail architecture test của Infrastructure). Package thêm mới (vào `Directory.Packages.props`): `Microsoft.AspNetCore.Authentication.JwtBearer` (JWT validation ở Web.Api), `System.IdentityModel.Tokens.Jwt` (tạo token ở Infrastructure).
 
 ### 3.2 Slice `Users` (feature Login)
 
@@ -54,9 +54,9 @@ Package thêm mới (vào `Directory.Packages.props`): `BCrypt.Net-Next` (hash m
 - Ports mới trong `Application/Abstractions/Authentication/`: `IPasswordHasher { Hash, Verify }`, `ITokenProvider { Create(User) }`.
 
 **Infrastructure:**
-- `BCryptPasswordHasher`, `JwtTokenProvider` (HS256, claims: `sub`, `email`, `username`, `name`; hạn 60 phút; cấu hình `Jwt:Secret/Issuer/Audience/ExpirationInMinutes` trong appsettings — secret dev để trong `appsettings.Development.json`).
+- `Pbkdf2PasswordHasher` (600.000 vòng, salt 128-bit, so sánh hằng-thời-gian; format lưu `pbkdf2-sha256$<iterations>$<salt>$<key>`), `JwtTokenProvider` (HS256, claims: `sub`, `email`, `username`, `name`; hạn 60 phút; cấu hình `Jwt:Secret/Issuer/Audience/ExpirationInMinutes` — để trong `appsettings.json` cho tiện chạy design-time migration).
 - `UserConfiguration : IEntityTypeConfiguration<User>` — unique index cho `Email` và `Username`.
-- Seed tài khoản demo trong migration: `demo@dlearning.vn` / username `demo` / mật khẩu `Demo@123` (hash BCrypt tĩnh).
+- Seed tài khoản demo trong migration: `demo@dlearning.vn` / username `demo` / mật khẩu `Demo@123` (hash PBKDF2 tĩnh).
 
 **Web.Api (`Endpoints/Users/`):**
 - `POST /users/register` → 200 `{ id }` | 400 validation | 409 trùng email/username.
