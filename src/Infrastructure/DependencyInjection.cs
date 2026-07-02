@@ -1,4 +1,6 @@
+using Application.Abstractions.Authentication;
 using Application.Abstractions.Data;
+using Infrastructure.Authentication;
 using Infrastructure.Database;
 using Infrastructure.Database.Interceptors;
 using Infrastructure.Time;
@@ -28,6 +30,9 @@ public static class DependencyInjection
         });
 
         services.AddScoped<IApplicationDbContext>(sp => sp.GetRequiredService<ApplicationDbContext>());
+
+        services.AddSingleton<IPasswordHasher, Pbkdf2PasswordHasher>();
+        services.AddScoped<ITokenProvider, JwtTokenProvider>();
 
         return services;
     }

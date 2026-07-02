@@ -1,5 +1,9 @@
+using System.Text;
 using Application;
 using Infrastructure;
+using Infrastructure.Database;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 using Web.Api.Infrastructure;
 using Web.Api.Middleware;
 
@@ -12,9 +16,44 @@ builder.Services.AddEndpoints(typeof(Program).Assembly);
 builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 builder.Services.AddProblemDetails();
 
+builder.Services
+    .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+            ValidAudience = builder.Configuration["Jwt:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Secret"]!))
+        };
+    });
+builder.Services.AddAuthorization();
+
+const string CorsPolicy = "dlearning-web";
+builder.Services.AddCors(options =>
+    options.AddPolicy(CorsPolicy, policy =>
+        policy.WithOrigins("http://localhost:5173")
+            .AllowAnyHeader()
+            .AllowAnyMethod()));
+
 WebApplication app = builder.Build();
 
 app.UseExceptionHandler();
+
+if (app.Environment.IsDevelopment())
+{
+    app.Services.ApplyMigrations();
+}
+
+app.UseCors(CorsPolicy);
+app.UseAuthentication();
+app.UseAuthorization();
+
 app.MapEndpoints();
 
 app.Run();
