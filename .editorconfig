@@ -114,3 +114,8 @@ dotnet_diagnostic.CA1307.severity = none
 # Reason: Test code calling HttpClient.GetAsync(string)/PostAsync(string) is idiomatic.
 #         Forcing Uri allocation in tests adds ceremony without benefit.
 dotnet_diagnostic.CA2234.severity = none
+
+# CA1308: Normalize strings to uppercase
+# Reason: Emails and usernames are stored lowercase on purpose (case-insensitive identifiers).
+#         ToLowerInvariant() is culture-safe; uppercasing them would be wrong for this domain.
+dotnet_diagnostic.CA1308.severity = none
