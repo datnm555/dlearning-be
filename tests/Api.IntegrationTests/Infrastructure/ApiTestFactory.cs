@@ -28,6 +28,10 @@ public sealed class ApiTestFactory : WebApplicationFactory<Program>, IAsyncLifet
             config.AddInMemoryCollection(new Dictionary<string, string?>
             {
                 ["ConnectionStrings:Database"] = _dbContainer.GetConnectionString(),
+                ["Jwt:Secret"] = "test-signing-key-test-signing-key-1234567890-abcdef",
+                ["Jwt:Issuer"] = "dlearning",
+                ["Jwt:Audience"] = "dlearning-web",
+                ["Jwt:ExpirationInMinutes"] = "60",
             });
         });
     }

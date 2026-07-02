@@ -20,11 +20,14 @@ public static class DependencyInjection
         services.AddSingleton<IDateTimeProvider, DateTimeProvider>();
         services.AddSingleton<AuditingInterceptor>();
 
-        string connectionString = configuration.GetConnectionString("Database")
-            ?? throw new InvalidOperationException("Connection string 'Database' is missing.");
-
         services.AddDbContext<ApplicationDbContext>((sp, options) =>
         {
+            // Read the connection string lazily from the built provider so test hosts
+            // (WebApplicationFactory) can override it — their config is layered in during
+            // Build(), after AddInfrastructure has already run.
+            string connectionString = sp.GetRequiredService<IConfiguration>().GetConnectionString("Database")
+                ?? throw new InvalidOperationException("Connection string 'Database' is missing.");
+
             options.UseNpgsql(connectionString);
             options.AddInterceptors(sp.GetRequiredService<AuditingInterceptor>());
         });
