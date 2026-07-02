@@ -25,6 +25,10 @@ public static class ResultExtensions
         ErrorType.NotFound => Results.NotFound(new { error.Code, error.Description }),
         ErrorType.Validation => Results.BadRequest(new { error.Code, error.Description }),
         ErrorType.Conflict => Results.Conflict(new { error.Code, error.Description }),
+        ErrorType.Unauthorized => Results.Problem(
+            detail: error.Description,
+            title: error.Code,
+            statusCode: StatusCodes.Status401Unauthorized),
         ErrorType.Problem => Results.Problem(
             detail: error.Description,
             title: error.Code,
