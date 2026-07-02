@@ -1,4 +1,6 @@
 using Application.Abstractions.Messaging;
+using Application.Alphabets;
+using Application.Alphabets.Data;
 using Application.Users;
 using Application.Users.Data;
 using Microsoft.Extensions.DependencyInjection;
@@ -11,6 +13,7 @@ public static class DependencyInjection
     {
         services.AddScoped<ICommandHandler<RegisterUserCommand, Guid>, RegisterUserCommandHandler>();
         services.AddScoped<ICommandHandler<LoginCommand, LoginResponse>, LoginCommandHandler>();
+        services.AddScoped<IQueryHandler<GetAlphabetQuery, IReadOnlyList<AlphabetLetterResponse>>, GetAlphabetQueryHandler>();
         return services;
     }
 }

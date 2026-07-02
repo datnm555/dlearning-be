@@ -1,4 +1,5 @@
 using Application.Abstractions.Data;
+using Domain.Alphabets;
 using Domain.Users;
 using Microsoft.EntityFrameworkCore;
 
@@ -8,6 +9,8 @@ internal sealed class ApplicationDbContext(DbContextOptions<ApplicationDbContext
     : DbContext(options), IApplicationDbContext
 {
     public DbSet<User> Users => Set<User>();
+
+    public DbSet<AlphabetLetter> AlphabetLetters => Set<AlphabetLetter>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
