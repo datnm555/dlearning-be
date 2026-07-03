@@ -1,5 +1,6 @@
 using Domain.Alphabets;
 using Domain.Catalog;
+using Domain.Colors;
 using Domain.Users;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,6 +15,8 @@ public interface IApplicationDbContext
     DbSet<Category> Categories { get; }
 
     DbSet<Product> Products { get; }
+
+    DbSet<Color> Colors { get; }
 
     DbSet<T> Set<T>() where T : class;
 

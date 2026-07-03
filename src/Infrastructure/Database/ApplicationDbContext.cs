@@ -1,6 +1,7 @@
 using Application.Abstractions.Data;
 using Domain.Alphabets;
 using Domain.Catalog;
+using Domain.Colors;
 using Domain.Users;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,6 +17,8 @@ internal sealed class ApplicationDbContext(DbContextOptions<ApplicationDbContext
     public DbSet<Category> Categories => Set<Category>();
 
     public DbSet<Product> Products => Set<Product>();
+
+    public DbSet<Color> Colors => Set<Color>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

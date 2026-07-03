@@ -3,6 +3,8 @@ using Application.Alphabets;
 using Application.Alphabets.Data;
 using Application.Catalog;
 using Application.Catalog.Data;
+using Application.Colors;
+using Application.Colors.Data;
 using Application.Users;
 using Application.Users.Data;
 using Microsoft.Extensions.DependencyInjection;
@@ -18,6 +20,7 @@ public static class DependencyInjection
         services.AddScoped<IQueryHandler<GetAlphabetQuery, IReadOnlyList<AlphabetLetterResponse>>, GetAlphabetQueryHandler>();
         services.AddScoped<IQueryHandler<GetCategoriesQuery, IReadOnlyList<CategoryDto>>, GetCategoriesQueryHandler>();
         services.AddScoped<IQueryHandler<GetProductsByCategoryQuery, IReadOnlyList<ProductDto>>, GetProductsByCategoryQueryHandler>();
+        services.AddScoped<IQueryHandler<GetColorsQuery, IReadOnlyList<ColorDto>>, GetColorsQueryHandler>();
         return services;
     }
 }
