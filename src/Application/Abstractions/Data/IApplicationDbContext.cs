@@ -1,6 +1,8 @@
 using Domain.Alphabets;
+using Domain.Animals;
 using Domain.Catalog;
 using Domain.Colors;
+using Domain.Counting;
 using Domain.Users;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,6 +19,10 @@ public interface IApplicationDbContext
     DbSet<Product> Products { get; }
 
     DbSet<Color> Colors { get; }
+
+    DbSet<Animal> Animals { get; }
+
+    DbSet<CountingNumber> CountingNumbers { get; }
 
     DbSet<T> Set<T>() where T : class;
 
