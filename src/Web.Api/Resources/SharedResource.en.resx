@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Category.preschool" xml:space="preserve"><value>Preschool</value></data>
+  <data name="Category.primary" xml:space="preserve"><value>Primary School</value></data>
+  <data name="Category.secondary" xml:space="preserve"><value>Secondary School</value></data>
+  <data name="Category.highschool" xml:space="preserve"><value>High School</value></data>
+  <data name="Category.university" xml:space="preserve"><value>University</value></data>
+  <data name="Product.alphabet" xml:space="preserve"><value>Alphabet</value></data>
+  <data name="Product.animals" xml:space="preserve"><value>Animals</value></data>
+  <data name="Product.colors" xml:space="preserve"><value>Colors</value></data>
+  <data name="Product.counting" xml:space="preserve"><value>Counting 1–10</value></data>
+</root>

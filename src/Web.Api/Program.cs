@@ -16,6 +16,21 @@ builder.Services.AddEndpoints(typeof(Program).Assembly);
 builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 builder.Services.AddProblemDetails();
 
+builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
+
+string[] supportedCultures = ["en", "vi"];
+builder.Services.Configure<Microsoft.AspNetCore.Builder.RequestLocalizationOptions>(options =>
+{
+    options.SetDefaultCulture("vi")
+        .AddSupportedCultures(supportedCultures)
+        .AddSupportedUICultures(supportedCultures);
+    options.RequestCultureProviders =
+    [
+        new Microsoft.AspNetCore.Localization.QueryStringRequestCultureProvider { QueryStringKey = "lang", UIQueryStringKey = "lang" },
+        new Microsoft.AspNetCore.Localization.AcceptLanguageHeaderRequestCultureProvider()
+    ];
+});
+
 builder.Services
     .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
@@ -50,6 +65,7 @@ if (app.Environment.IsDevelopment())
     app.Services.ApplyMigrations();
 }
 
+app.UseRequestLocalization();
 app.UseCors(CorsPolicy);
 app.UseAuthentication();
 app.UseAuthorization();
