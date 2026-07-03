@@ -51,7 +51,9 @@ public sealed class CatalogEndpointsTests(ApiTestFactory factory) : IClassFixtur
         products[0].Code.ShouldBe("alphabet");
         products[0].Name.ShouldBe("Alphabet");
         products[0].IsAvailable.ShouldBeTrue();
-        products.Count(p => p.IsAvailable).ShouldBe(1);
+        // alphabet + colors are the available lessons; animals + counting are still coming soon.
+        products.Count(p => p.IsAvailable).ShouldBe(2);
+        products.Single(p => p.Code == "colors").IsAvailable.ShouldBeTrue();
     }
 
     [Fact]
