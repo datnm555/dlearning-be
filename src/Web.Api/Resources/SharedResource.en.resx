@@ -13,4 +13,26 @@
   <data name="Product.animals" xml:space="preserve"><value>Animals</value></data>
   <data name="Product.colors" xml:space="preserve"><value>Colors</value></data>
   <data name="Product.counting" xml:space="preserve"><value>Counting 1–10</value></data>
+  <data name="Color.red" xml:space="preserve"><value>Red</value></data>
+  <data name="Color.orange" xml:space="preserve"><value>Orange</value></data>
+  <data name="Color.yellow" xml:space="preserve"><value>Yellow</value></data>
+  <data name="Color.green" xml:space="preserve"><value>Green</value></data>
+  <data name="Color.blue" xml:space="preserve"><value>Blue</value></data>
+  <data name="Color.purple" xml:space="preserve"><value>Purple</value></data>
+  <data name="Color.pink" xml:space="preserve"><value>Pink</value></data>
+  <data name="Color.brown" xml:space="preserve"><value>Brown</value></data>
+  <data name="Color.black" xml:space="preserve"><value>Black</value></data>
+  <data name="Color.white" xml:space="preserve"><value>White</value></data>
+  <data name="Color.gray" xml:space="preserve"><value>Gray</value></data>
+  <data name="ColorExample.red" xml:space="preserve"><value>apple</value></data>
+  <data name="ColorExample.orange" xml:space="preserve"><value>orange</value></data>
+  <data name="ColorExample.yellow" xml:space="preserve"><value>banana</value></data>
+  <data name="ColorExample.green" xml:space="preserve"><value>leaf</value></data>
+  <data name="ColorExample.blue" xml:space="preserve"><value>blueberry</value></data>
+  <data name="ColorExample.purple" xml:space="preserve"><value>grapes</value></data>
+  <data name="ColorExample.pink" xml:space="preserve"><value>flower</value></data>
+  <data name="ColorExample.brown" xml:space="preserve"><value>chocolate</value></data>
+  <data name="ColorExample.black" xml:space="preserve"><value>black cat</value></data>
+  <data name="ColorExample.white" xml:space="preserve"><value>cloud</value></data>
+  <data name="ColorExample.gray" xml:space="preserve"><value>elephant</value></data>
 </root>

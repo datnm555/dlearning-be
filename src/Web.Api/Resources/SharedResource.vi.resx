@@ -13,4 +13,26 @@
   <data name="Product.animals" xml:space="preserve"><value>Con vật</value></data>
   <data name="Product.colors" xml:space="preserve"><value>Màu sắc</value></data>
   <data name="Product.counting" xml:space="preserve"><value>Học đếm 1–10</value></data>
+  <data name="Color.red" xml:space="preserve"><value>Đỏ</value></data>
+  <data name="Color.orange" xml:space="preserve"><value>Cam</value></data>
+  <data name="Color.yellow" xml:space="preserve"><value>Vàng</value></data>
+  <data name="Color.green" xml:space="preserve"><value>Xanh lá</value></data>
+  <data name="Color.blue" xml:space="preserve"><value>Xanh dương</value></data>
+  <data name="Color.purple" xml:space="preserve"><value>Tím</value></data>
+  <data name="Color.pink" xml:space="preserve"><value>Hồng</value></data>
+  <data name="Color.brown" xml:space="preserve"><value>Nâu</value></data>
+  <data name="Color.black" xml:space="preserve"><value>Đen</value></data>
+  <data name="Color.white" xml:space="preserve"><value>Trắng</value></data>
+  <data name="Color.gray" xml:space="preserve"><value>Xám</value></data>
+  <data name="ColorExample.red" xml:space="preserve"><value>quả táo</value></data>
+  <data name="ColorExample.orange" xml:space="preserve"><value>quả cam</value></data>
+  <data name="ColorExample.yellow" xml:space="preserve"><value>quả chuối</value></data>
+  <data name="ColorExample.green" xml:space="preserve"><value>lá cây</value></data>
+  <data name="ColorExample.blue" xml:space="preserve"><value>quả việt quất</value></data>
+  <data name="ColorExample.purple" xml:space="preserve"><value>quả nho</value></data>
+  <data name="ColorExample.pink" xml:space="preserve"><value>bông hoa</value></data>
+  <data name="ColorExample.brown" xml:space="preserve"><value>sô cô la</value></data>
+  <data name="ColorExample.black" xml:space="preserve"><value>mèo đen</value></data>
+  <data name="ColorExample.white" xml:space="preserve"><value>đám mây</value></data>
+  <data name="ColorExample.gray" xml:space="preserve"><value>con voi</value></data>
 </root>
