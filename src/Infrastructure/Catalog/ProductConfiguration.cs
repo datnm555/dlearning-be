@@ -37,9 +37,9 @@ internal sealed class ProductConfiguration : IEntityTypeConfiguration<Product>
         (string Code, string Icon, bool Available)[] rows =
         [
             ("alphabet", "🔤", true),
-            ("animals", "🐾", false),
+            ("animals", "🐾", true),
             ("colors", "🎨", true),
-            ("counting", "🔢", false)
+            ("counting", "🔢", true)
         ];
 
         var seed = new object[rows.Length];
