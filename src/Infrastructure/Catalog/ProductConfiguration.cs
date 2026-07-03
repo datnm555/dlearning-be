@@ -38,7 +38,7 @@ internal sealed class ProductConfiguration : IEntityTypeConfiguration<Product>
         [
             ("alphabet", "🔤", true),
             ("animals", "🐾", false),
-            ("colors", "🎨", false),
+            ("colors", "🎨", true),
             ("counting", "🔢", false)
         ];
 
