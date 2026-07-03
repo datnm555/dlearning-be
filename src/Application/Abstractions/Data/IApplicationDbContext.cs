@@ -1,4 +1,5 @@
 using Domain.Alphabets;
+using Domain.Catalog;
 using Domain.Users;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,6 +10,10 @@ public interface IApplicationDbContext
     DbSet<User> Users { get; }
 
     DbSet<AlphabetLetter> AlphabetLetters { get; }
+
+    DbSet<Category> Categories { get; }
+
+    DbSet<Product> Products { get; }
 
     DbSet<T> Set<T>() where T : class;
 
