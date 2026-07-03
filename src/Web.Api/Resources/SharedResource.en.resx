@@ -35,4 +35,38 @@
   <data name="ColorExample.black" xml:space="preserve"><value>black cat</value></data>
   <data name="ColorExample.white" xml:space="preserve"><value>cloud</value></data>
   <data name="ColorExample.gray" xml:space="preserve"><value>elephant</value></data>
+  <data name="Animal.cat" xml:space="preserve"><value>Cat</value></data>
+  <data name="Animal.dog" xml:space="preserve"><value>Dog</value></data>
+  <data name="Animal.cow" xml:space="preserve"><value>Cow</value></data>
+  <data name="Animal.chicken" xml:space="preserve"><value>Chicken</value></data>
+  <data name="Animal.duck" xml:space="preserve"><value>Duck</value></data>
+  <data name="Animal.pig" xml:space="preserve"><value>Pig</value></data>
+  <data name="Animal.elephant" xml:space="preserve"><value>Elephant</value></data>
+  <data name="Animal.lion" xml:space="preserve"><value>Lion</value></data>
+  <data name="Animal.monkey" xml:space="preserve"><value>Monkey</value></data>
+  <data name="Animal.bird" xml:space="preserve"><value>Bird</value></data>
+  <data name="Animal.fish" xml:space="preserve"><value>Fish</value></data>
+  <data name="Animal.frog" xml:space="preserve"><value>Frog</value></data>
+  <data name="AnimalSound.cat" xml:space="preserve"><value>meow</value></data>
+  <data name="AnimalSound.dog" xml:space="preserve"><value>woof</value></data>
+  <data name="AnimalSound.cow" xml:space="preserve"><value>moo</value></data>
+  <data name="AnimalSound.chicken" xml:space="preserve"><value>cluck</value></data>
+  <data name="AnimalSound.duck" xml:space="preserve"><value>quack</value></data>
+  <data name="AnimalSound.pig" xml:space="preserve"><value>oink</value></data>
+  <data name="AnimalSound.elephant" xml:space="preserve"><value>toot</value></data>
+  <data name="AnimalSound.lion" xml:space="preserve"><value>roar</value></data>
+  <data name="AnimalSound.monkey" xml:space="preserve"><value>ooh ooh</value></data>
+  <data name="AnimalSound.bird" xml:space="preserve"><value>tweet</value></data>
+  <data name="AnimalSound.fish" xml:space="preserve"><value>blub</value></data>
+  <data name="AnimalSound.frog" xml:space="preserve"><value>ribbit</value></data>
+  <data name="Number.1" xml:space="preserve"><value>One</value></data>
+  <data name="Number.2" xml:space="preserve"><value>Two</value></data>
+  <data name="Number.3" xml:space="preserve"><value>Three</value></data>
+  <data name="Number.4" xml:space="preserve"><value>Four</value></data>
+  <data name="Number.5" xml:space="preserve"><value>Five</value></data>
+  <data name="Number.6" xml:space="preserve"><value>Six</value></data>
+  <data name="Number.7" xml:space="preserve"><value>Seven</value></data>
+  <data name="Number.8" xml:space="preserve"><value>Eight</value></data>
+  <data name="Number.9" xml:space="preserve"><value>Nine</value></data>
+  <data name="Number.10" xml:space="preserve"><value>Ten</value></data>
 </root>

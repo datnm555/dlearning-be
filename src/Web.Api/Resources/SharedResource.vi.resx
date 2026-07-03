@@ -35,4 +35,38 @@
   <data name="ColorExample.black" xml:space="preserve"><value>mèo đen</value></data>
   <data name="ColorExample.white" xml:space="preserve"><value>đám mây</value></data>
   <data name="ColorExample.gray" xml:space="preserve"><value>con voi</value></data>
+  <data name="Animal.cat" xml:space="preserve"><value>Mèo</value></data>
+  <data name="Animal.dog" xml:space="preserve"><value>Chó</value></data>
+  <data name="Animal.cow" xml:space="preserve"><value>Bò</value></data>
+  <data name="Animal.chicken" xml:space="preserve"><value>Gà</value></data>
+  <data name="Animal.duck" xml:space="preserve"><value>Vịt</value></data>
+  <data name="Animal.pig" xml:space="preserve"><value>Lợn</value></data>
+  <data name="Animal.elephant" xml:space="preserve"><value>Voi</value></data>
+  <data name="Animal.lion" xml:space="preserve"><value>Sư tử</value></data>
+  <data name="Animal.monkey" xml:space="preserve"><value>Khỉ</value></data>
+  <data name="Animal.bird" xml:space="preserve"><value>Chim</value></data>
+  <data name="Animal.fish" xml:space="preserve"><value>Cá</value></data>
+  <data name="Animal.frog" xml:space="preserve"><value>Ếch</value></data>
+  <data name="AnimalSound.cat" xml:space="preserve"><value>meo meo</value></data>
+  <data name="AnimalSound.dog" xml:space="preserve"><value>gâu gâu</value></data>
+  <data name="AnimalSound.cow" xml:space="preserve"><value>ò ọ</value></data>
+  <data name="AnimalSound.chicken" xml:space="preserve"><value>cục tác</value></data>
+  <data name="AnimalSound.duck" xml:space="preserve"><value>cạp cạp</value></data>
+  <data name="AnimalSound.pig" xml:space="preserve"><value>ụt ịt</value></data>
+  <data name="AnimalSound.elephant" xml:space="preserve"><value>ù ù</value></data>
+  <data name="AnimalSound.lion" xml:space="preserve"><value>gừ gừ</value></data>
+  <data name="AnimalSound.monkey" xml:space="preserve"><value>khẹc khẹc</value></data>
+  <data name="AnimalSound.bird" xml:space="preserve"><value>chíp chíp</value></data>
+  <data name="AnimalSound.fish" xml:space="preserve"><value>ục ục</value></data>
+  <data name="AnimalSound.frog" xml:space="preserve"><value>ộp ộp</value></data>
+  <data name="Number.1" xml:space="preserve"><value>Một</value></data>
+  <data name="Number.2" xml:space="preserve"><value>Hai</value></data>
+  <data name="Number.3" xml:space="preserve"><value>Ba</value></data>
+  <data name="Number.4" xml:space="preserve"><value>Bốn</value></data>
+  <data name="Number.5" xml:space="preserve"><value>Năm</value></data>
+  <data name="Number.6" xml:space="preserve"><value>Sáu</value></data>
+  <data name="Number.7" xml:space="preserve"><value>Bảy</value></data>
+  <data name="Number.8" xml:space="preserve"><value>Tám</value></data>
+  <data name="Number.9" xml:space="preserve"><value>Chín</value></data>
+  <data name="Number.10" xml:space="preserve"><value>Mười</value></data>
 </root>
